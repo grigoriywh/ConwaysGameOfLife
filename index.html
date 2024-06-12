@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Игра «Жизнь»</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000;
+            margin: 0;
+        }
+        #container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        canvas {
+            border: 1px solid #fff;
+        }
+        .controls {
+            display: flex;
+            flex-direction: column;
+            margin-left: 20px;
+        }
+        button, input[type="range"], select {
+            padding: 10px;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+        h1 {
+            color: white;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        p {
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div>
+            <h1>Игра «Жизнь» математика Джона Хортона Конуэя</h1>
+            <canvas id="gameCanvas" width="800" height="800"></canvas>
+            <p>Используйте мышь для рисования конфигурации</p>
+        </div>
+        <div class="controls">
+            <button id="startButton">Старт</button>
+            <button id="stopButton">Стоп</button>
+            <label for="speedRange" style="color:white">Скорость:</label>
+            <input type="range" id="speedRange" min="50" max="1000" value="200">
+        </div>
+    </div>
+    <script src="gameOfLife.js"></script>
+</body>
+</html>
